@@ -5,14 +5,12 @@ using ProniaWebApplication.Models;
 
 namespace ProniaWebApplication.Areas.Pronia.Controllers
 {
-    public class ProductController : Controller
+    public class CategoryController : Controller
     {
         private readonly AppDbContext _context;
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+      
+       
         public IActionResult Create()
         {
             return View();
@@ -38,5 +36,15 @@ namespace ProniaWebApplication.Areas.Pronia.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Category category = await _context.Category.FirstOrDefaultAsync(c => c.Id == id);
+            if (category is null) return NotFound();
+            return View(category);
+
+        }
+
     }
 }

@@ -382,3 +382,14 @@ C:\Users\user\Desktop\ProniaWebApplication\ProniaWebApplication\ProniaWebApplica
 C:\Users\user\Desktop\ProniaWebApplication\ProniaWebApplication\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.csproj.CopyComplete
 C:\Users\user\Desktop\ProniaWebApplication\ProniaWebApplication\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.genruntimeconfig.cache
 C:\Users\user\Desktop\ProniaWebApplication\ProniaWebApplication\ProniaWebApplication\obj\Debug\net6.0\ref\ProniaWebApplication.dll
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.AssemblyInfo.cs
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.RazorAssemblyInfo.cache
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.RazorAssemblyInfo.cs
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.dll
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\refint\ProniaWebApplication.dll
+C:\Users\user\Desktop\ProniaNew\ProniaWebApplication\obj\Debug\net6.0\ProniaWebApplication.pdb

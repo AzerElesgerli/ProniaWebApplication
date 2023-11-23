@@ -1,7 +1,9 @@
-﻿@model List<Product>
+﻿﻿@using ProniaWebApplication.Models;
+@model List<Category>
 @{
     int count = 0;
 }
+
 <div class="row">
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
@@ -16,50 +18,38 @@
                                     No
                                 </th>
                                 <th>
-                                   Name
+                                    Name
                                 </th>
-                                <th>
-                                   Size
-                                </th>
-                                <th>
-                                   Color
-                                </th>
-                                <th>
-                                    Tag
-                                </th>
+   
                             </tr>
                         </thead>
                         <tbody>
-                           @foreach (var item in Model)
+                            @foreach (var item in Model)
                             {
                                 count++;
                                 <tr>
-                                <td>
-                                    @count
-                                </td>
-                                <td>
-                                    @item.Name
-                                </td>
-                                <td>
-                                    @item.Colors
-                                </td>
                                     <td>
-                                        @item.Tags
+                                        @count
                                     </td>
-                                <td>
-                                    <a asp-action="update">
+                                    <td>
+                                        @item.Name
+                                    </td>
+                                 
+                                 
+                                   <td>
+                                        <a asp-action="update">
                                             <button type="button" class="btn btn-warning btn-rounded btn-fw">
                                                 <i class="mdi mdi-pencil"></i>
                                             </button>
-                                    </a>
+                                        </a>
                                         <a asp-action="delete">
                                             <button type="button" class="btn btn-danger btn-rounded btn-fw">
                                                 <i class="mdi mdi-delete"></i>
                                             </button>
                                         </a>
-                                </td>
-                            </tr>
-                                
+                                    </td>
+                                </tr>
+
                             }
                         </tbody>
                     </table>
