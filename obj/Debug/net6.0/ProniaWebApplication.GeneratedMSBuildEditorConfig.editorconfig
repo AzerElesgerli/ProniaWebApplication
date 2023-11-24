@@ -28,6 +28,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvbmlhXFZpZXdzXENhdGVnb3J5XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/user/Desktop/ProniaNew/ProniaWebApplication/Areas/Pronia/Views/Color/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvbmlhXFZpZXdzXENvbG9yXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/ProniaNew/ProniaWebApplication/Areas/Pronia/Views/Color/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvbmlhXFZpZXdzXENvbG9yXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/ProniaNew/ProniaWebApplication/Areas/Pronia/Views/Color/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvbmlhXFZpZXdzXENvbG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/ProniaNew/ProniaWebApplication/Areas/Pronia/Views/Color/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvbmlhXFZpZXdzXENvbG9yXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Desktop/ProniaNew/ProniaWebApplication/Areas/Pronia/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvbmlhXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -5,30 +5,17 @@ using ProniaWebApplication.Models;
 
 namespace ProniaWebApplication.Areas.Pronia.Controllers
 {
-    public class TagController : Controller
+    public class ColorController : Controller
     {
         public AppDbContext _context;
-
-        public TagController(AppDbContext context)
-        {
-            _context = context;
-        }
-        [HttpPost]
-        public async Task<IActionResult> Index()
-        {
-            List<Tag> tags = await _context.Tags.Include(x => x.Name).ToListAsync();
-            return View(tags);
-        }
-
-        public IActionResult Create()
+        public IActionResult Index()
         {
             return View();
         }
-
         [HttpPost]
-        public async Task<IActionResult> Create(Tag tag)
+        public async Task<IActionResult> Create(Color color)
         {
-            bool result = await _context.Tags.AnyAsync(x => x.Name == tag.Name);
+            bool result = await _context.Colors.AnyAsync(x => x.Name == color.Name);
 
             if (!ModelState.IsValid)
             {
@@ -37,11 +24,11 @@ namespace ProniaWebApplication.Areas.Pronia.Controllers
 
             if (result)
             {
-                ModelState.AddModelError("Fullname", "Eyni adli tag yarana bilmez");
+                ModelState.AddModelError("Fullname", "Eyni adli yazici yarana bilmez");
                 return View();
             }
 
-            await _context.AddAsync(tag);
+            await _context.AddAsync(color);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
@@ -49,21 +36,21 @@ namespace ProniaWebApplication.Areas.Pronia.Controllers
 
         public async Task<IActionResult> Update(int id)
         {
-            Tag tag = await _context.Tags.FirstOrDefaultAsync(x => x.Id == id);
+            Color color = await _context.Colors.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (tag == null) return NotFound();
+            if (color == null) return NotFound();
 
-            return View(tag);
+            return View(color);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int? id, Tag tag)
+        public async Task<IActionResult> Update(int? id, Color color)
         {
-            Tag exist = await _context.Tags.FirstOrDefaultAsync(x => x.Id == id);
+            Color exist = await _context.Colors.FirstOrDefaultAsync(x => x.Id == id);
 
             if (exist == null) return NotFound();
 
-            bool result = await _context.Tags.AnyAsync(x => x.Name == tag.Name);
+            bool result = await _context.Colors.AnyAsync(x => x.Name == color.Name);
 
             if (!ModelState.IsValid)
             {
@@ -72,11 +59,11 @@ namespace ProniaWebApplication.Areas.Pronia.Controllers
 
             if (result)
             {
-                ModelState.AddModelError("Fullname", "Eyni adli Tag yarana bilmez");
+                ModelState.AddModelError("Color", "Eyni adli Reng yarana bilmez");
                 return View(exist);
             }
 
-            exist.Name = tag.Name;
+            exist.Name = color.Name;
 
             await _context.SaveChangesAsync();
 
@@ -85,13 +72,16 @@ namespace ProniaWebApplication.Areas.Pronia.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
-            Tag exist = await _context.Tags.FirstOrDefaultAsync(x => x.Id == id);
+            Color exist = await _context.Colors.FirstOrDefaultAsync(x => x.Id == id);
 
             if (exist == null) return NotFound();
 
-            _context.Tags.Remove(exist);
+            _context.Colors.Remove(exist);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+    }
 }
+    
+
