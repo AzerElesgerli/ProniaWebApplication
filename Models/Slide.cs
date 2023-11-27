@@ -10,7 +10,7 @@ namespace ProniaWebApplication.Models
         public string? Description { get; set; }
         public string? Image { get; set; }
         public int? Order { get; set; }
-
+          
         [NotMapped]
         public IFormFile? image { get; set; }
     }

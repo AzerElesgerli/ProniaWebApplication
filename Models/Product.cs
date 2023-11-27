@@ -8,7 +8,7 @@
         public int?  Price { get; set; }
         public string? Image { get; set; }
 
-
+           
         public List<Color>Colors { get; set; }
         public List<Size> Sizes { get; set; }
 
