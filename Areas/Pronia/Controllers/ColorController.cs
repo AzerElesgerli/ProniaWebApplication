@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProniaWebApplication.Areas.Pronia.ViewModels.Color;
 using ProniaWebApplication.DAL;
 using ProniaWebApplication.Models;
 
@@ -13,27 +14,24 @@ namespace ProniaWebApplication.Areas.Pronia.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Color color)
+        public async Task<IActionResult> Create(CreateColorVm createColorVM)
         {
-            bool result = await _context.Colors.AnyAsync(x => x.Name == color.Name);
+           
 
-            if (!ModelState.IsValid)
+
+            Color color = new Color()
             {
-                return View();
-            }
+                Name = createColorVM.Name,
+                Id = createColorVM.ColorId,
+              
+            };
 
-            if (result)
-            {
-                ModelState.AddModelError("Fullname", "Eyni adli yazici yarana bilmez");
-                return View();
-            }
-
-            await _context.AddAsync(color);
+            await _context.Colors.AddAsync(color);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
-        }
 
+        }
         public async Task<IActionResult> Update(int id)
         {
             Color color = await _context.Colors.FirstOrDefaultAsync(x => x.Id == id);
