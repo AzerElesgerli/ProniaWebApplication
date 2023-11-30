@@ -94,4 +94,5 @@ namespace ProniaWebApplication.Areas.Pronia.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+    }
 }
